@@ -7,7 +7,7 @@ ttlosinspector is a Python script that helps determine the operating system of a
 2. Clone the repository:
 
    
-    git clone https://github.com/tuusuario/TTLInspector.git
+    git clone https://github.com/s0lh4ck/ttlosinspector.git
    
     cd ./ttlosinspector
    
