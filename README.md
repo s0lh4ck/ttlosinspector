@@ -8,5 +8,7 @@ ttlosinspector is a Python script that helps determine the operating system of a
 
    
     git clone https://github.com/tuusuario/TTLInspector.git
+   
     cd ./ttlosinspector
+   
     python3 ttlinspector
