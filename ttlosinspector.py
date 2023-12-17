@@ -1,6 +1,16 @@
 import subprocess
 import platform
 
+print(""" #CREATED BY
+         ###                                           
+ ####   #   #  #      #    # #    #   ####  #    # 
+#      #     # #      #    # #    #  #    # #   #  
+ ####  #     # #      ###### #    #  #      ####   
+     # #     # #      #    # ####### #      #  #   
+#    #  #   #  #      #    #      #  #    # #   #  
+ ####    ###   ###### #    #      #   ####  #    # 
+      """)
+
 def detect_operating_system(ip_address):
     operating_system = platform.system().lower()
 
@@ -26,6 +36,7 @@ def detect_operating_system(ip_address):
                 print(f"Failed to determine operating system with TTL: {ttl}")
         else:
             print("TTL not found in ping response.")
+            
     except subprocess.CalledProcessError as e:
         print(f"Error executing ping: {e}")
 
