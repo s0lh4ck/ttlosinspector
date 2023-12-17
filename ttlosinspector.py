@@ -31,15 +31,15 @@ def detect_operating_system(ip_address):
             ttl = int(ttl_value)
             
             if 0 < ttl <= 64:
-                print(f"Detected operating system: Linux")
+                detected_os = platform.system()
+                print(f"Detected operating system: {detected_os}")
             elif 64 < ttl <= 128:
-                print(f"Detected operating system: Windows")
+                detected_os = platform.system()
+                print(f"Detected operating system: {detected_os}")
             else:
                 print(f"Failed to determine operating system with TTL: {ttl}")
         else:
             print("TTL not found in ping response.")
-        
-       
 
     except subprocess.CalledProcessError as e:
         print(f"Error executing ping: {e}")
