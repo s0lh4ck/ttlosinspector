@@ -2,8 +2,8 @@ import subprocess
 import platform
 import re
 
-print(""" #Created by
-         ###                                     
+  print(""" #Created by:
+         ###                 #                    
  ####   #   #  #      #    # #    #   ####  #    # 
 #      #     # #      #    # #    #  #    # #   #  
  ####  #     # #      ###### #    #  #      ####   
@@ -24,10 +24,11 @@ def detect_operating_system(ip_address):
             print(f"Unsupported operating system: {operating_system}")
             return
 
-        ttl_match = re.search(r"TTL=(\d+)", ping_result.decode('latin-1'))
+        ttl_match = re.search(r"TTL=(\d+)|time=(\d+)", ping_result.decode('latin-1'))
         
         if ttl_match:
-            ttl = int(ttl_match.group(1))
+            ttl_value = next((group for group in ttl_match.groups() if group is not None), None)
+            ttl = int(ttl_value)
             
             if 0 < ttl <= 64:
                 print(f"Detected operating system: Linux")
@@ -38,7 +39,7 @@ def detect_operating_system(ip_address):
         else:
             print("TTL not found in ping response.")
         
-     
+       
 
     except subprocess.CalledProcessError as e:
         print(f"Error executing ping: {e}")
