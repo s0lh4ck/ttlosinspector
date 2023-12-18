@@ -1,5 +1,5 @@
 # ttlosinspector
-ttlosinspector is a Python script that helps determine the operating system of a remote host by inspecting the Time To Live (TTL) value in the response of a ping.
+ttlosinspector is a simple Python script that helps determine the operating system of a remote host by inspecting the Time To Live (TTL) value in the response of a ping.
 
 ## Usage
 
@@ -11,4 +11,4 @@ ttlosinspector is a Python script that helps determine the operating system of a
    
     cd ./ttlosinspector
    
-    python3 ttlinspector
+    python3 ttlosinspector
