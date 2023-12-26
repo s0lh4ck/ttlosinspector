@@ -12,3 +12,7 @@ ttlosinspector is a simple Python script that helps determine the operating syst
     cd ./ttlosinspector
    
     python3 ttlosinspector
+    
+    or you can add the script to your $PATH
+
+
